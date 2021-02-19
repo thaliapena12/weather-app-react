@@ -3,6 +3,25 @@ import React from 'react';
 const Weather = ({tempK, tempFeelsLikeK, tempMinK, tempMaxK, dt, main, icon, humidity,wind}) => {
  
 
+    function convertDate(date){
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let temp_date = date.split("/");
+
+        return  months[temp_date[0]-1] + ", " + temp_date[1] + ", " + temp_date[2];
+    }
+    
+    const convertKelvinToFahrenheit = (kelvin) => {
+       return ((kelvin - 273.15) * 9/5 + 32).toFixed()
+    }
+
+    let tempF = convertKelvinToFahrenheit(tempK)
+    let tempFeelsLikeF = convertKelvinToFahrenheit(tempFeelsLikeK)
+    let tempMaxF = convertKelvinToFahrenheit(tempMaxK)
+    let tempMinF = convertKelvinToFahrenheit(tempMinK)
+
+    const date = new Date(dt)
+    const datee = date.toLocaleDateString()
+    const d = convertDate(datee)
 
     return (
 
