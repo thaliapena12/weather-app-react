@@ -2,3 +2,91 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #c5c5ce;
+    display: grid;
+    place-items: center;
+     height: 100%;
+}
+
+.red, .blue, .yellow, .orange {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}
+
+.red {
+    width:100%;
+    height:90%;
+    background:#ffffff;
+    overflow: hidden;
+    padding: 1px 2px 6px 2px;
+    border: 2px solid rgb(31, 27, 27);
+    border-radius: 3px;
+    margin-bottom: 2px;
+    box-shadow: 30px 30px 40px rgba(37, 35, 35, 0.1);
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;   
+}
+
+.blue {
+    height:100px;
+    width: 20%;
+    display: inline;
+    margin: 0 2% 2% 0;  
+}
+
+.yellow {
+    height:100px;
+    width: 20%;
+    display: inline;
+    margin: 0 1% 1% 0;
+    text-align: center;
+}
+
+span{
+    font-weight: 800;
+    color: #666b77;
+    margin-left: 4px;
+}
+
+img {
+    height: auto;
+    margin: -40px 0 -30px 0;
+    
+}
+
+.temp {
+    font-size: 30px;
+    font-family: 'Marcellus', serif;
+    font-weight: bold;
+    color: #2b304d;
+    margin: -5px 0% 0% 0;
+}
+
+.main {
+    margin: 0 1% 1% 0;
+    font-weight: 900;
+    color:#2b304d;
+}
+
+#time {
+    font-weight: bold;
+}
+
+#date {
+    font-family: 'Marcellus', serif;
+}
+
+h1, button, input {
+    font-family: 'Marcellus', serif;
+}
+
+
