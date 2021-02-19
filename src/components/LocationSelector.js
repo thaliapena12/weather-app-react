@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 
 
-const LocationSelector = ({onSubmit}) => {
+const LocationSelector = ({handleSubmit}) => {
     const [location,setLocation] = useState('');
+   
 
     return (
         <div className="location-selector">
@@ -13,9 +14,9 @@ const LocationSelector = ({onSubmit}) => {
                 name="search-input" 
                 placeholder="Enter your city" 
                 value={location} 
-                onChange={(e) => setLocation(e.target.location)}>
+                onChange={(e) => setLocation(e.target.value)}>
             </input>
-            <button onClick={() => onSubmit(location)}>Search</button>
+            <button onClick={() => handleSubmit(location)}>Search</button>
         </div>
     )
 

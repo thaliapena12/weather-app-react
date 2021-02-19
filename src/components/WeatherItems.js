@@ -1,11 +1,13 @@
 import React from 'react'
 import Weather from './Weather';
-import LocationSelector from './LocationSelector';
 
 
-const WeatherItems= ({weathers}) => {
+
+const WeatherItems= ({weathers, city}) => {
     return (
         <div>
+            <p>{city.name}</p>
+            
            {weathers.map(({dt, main, weather, wind}) => (
                 <div key={dt}>
                     <Weather

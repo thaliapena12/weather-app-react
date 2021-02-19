@@ -1,12 +1,13 @@
 import {useState, useEffect} from 'react';
 
 const Fetch = (startUrl) => {
-  //whenever there is a new location the url will change
-  const [url, setUrl] = useState(startUrl);
+  // create state variables
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
-  
+  const [url, setUrl] = useState(startUrl);
+
+
   useEffect(() => {
     if(!url) return;
     setLoading(true);
@@ -15,23 +16,32 @@ const Fetch = (startUrl) => {
     setError(null);
 
     fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setLoading(false);
-        if(data.cod >= 400) {
+        .then((response) => response.json())
+        .then((data) => {
+
+            // error handling for nonexistent data
+            setLoading(false);
+            if(data.cod >= 400) {
                 setError(data.message);
                 return;
             }
             setData(data);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false)
-      }); 
-      //use effect will load everytime the url changes
+        })
+        .catch((error) => {
+            setLoading(false);
+            setError(error);
+        });
+        //use effect will load everytime the url changes
   }, [url]);
 //return what you want your other components to have access to
-  return { data, error, setUrl, loading };
+  return { data, error, loading, setUrl };
 };
 
 export default Fetch;
+
+
+
+
+
+
+

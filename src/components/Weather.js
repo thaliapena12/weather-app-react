@@ -13,6 +13,7 @@ const Weather = ({tempK, tempFeelsLikeK, tempMinK, tempMaxK, dt, main, icon, hum
     const convertKelvinToFahrenheit = (kelvin) => {
        return ((kelvin - 273.15) * 9/5 + 32).toFixed()
     }
+  
 
     let tempF = convertKelvinToFahrenheit(tempK)
     let tempFeelsLikeF = convertKelvinToFahrenheit(tempFeelsLikeK)
@@ -31,7 +32,7 @@ const Weather = ({tempK, tempFeelsLikeK, tempMinK, tempMaxK, dt, main, icon, hum
                     <p><span id="time">{date.toLocaleTimeString()}</span></p>
                         <div>
                             <p className="temp">{tempF}°F </p>
-                            <p className="img-icon"> <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} /> </p>
+                            <p className="img-icon"> <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="weather-icon" /> </p>
                             <p className="main">{main}</p>           
                         </div>
                             <p className="blue">Feels Like:<span>{tempFeelsLikeF}° F</span></p>

@@ -8,16 +8,16 @@ function App() {
   const {data, error, setUrl, loading} = Fetch();
 
   const getData = () => {
-    if(error) return <h2>Error when fetching: {error}</h2>
-    if(!data && loading) return <h2></h2>
+    if(error) return <h2>Error: {error}</h2>
+    if(!data && loading) return <h2>..loading..</h2>
     if(!data) return null;
-    return <WeatherItems weathers={data.list} />
+  
+    return <WeatherItems weathers={data.list} city={data.city} />
   };
  
   return (
     <div className="App">
-     
-      <LocationSelector onSubmit={(location) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${location},us&appid=${API_KEY}`)} />
+      <LocationSelector handleSubmit={(location) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${location},us&appid=${API_KEY}`)} />
       
       {getData()}
        
