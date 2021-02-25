@@ -88,6 +88,9 @@ body {
 h2, h1, #site-search, .button {
     font-family: 'Marcellus', serif;
 }
+ h1 {
+  color: #2b304d;
+ }
 
 #site-search {
   margin-bottom: 20px;
