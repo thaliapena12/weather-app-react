@@ -5,9 +5,7 @@ import Weather from './Weather';
 
 const WeatherItems= ({weathers, city}) => {
     return (
-        <div>
-            <p>{city.name}</p>
-            
+        <div className="container flex">
            {weathers.map(({dt, main, weather, wind}) => (
                 <div key={dt}>
                     <Weather

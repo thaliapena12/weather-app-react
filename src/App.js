@@ -1,7 +1,7 @@
 import './App.css';
 import WeatherItems from './components/WeatherItems';
 import LocationSelector from './components/LocationSelector';
-import Fetch from './hooks/Fetch'
+import Fetch from './components/hooks/Fetch.js'
 import {API_KEY, API_BASE_URL} from './config';
 
 function App() {

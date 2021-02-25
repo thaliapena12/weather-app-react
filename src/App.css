@@ -4,63 +4,73 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
+
 html {
     height: 100%;
+    place-items: center;
 }
 
 body {
-    background-color: #c5c5ce;
+    background-color: #a5a5b1;
     display: grid;
     place-items: center;
-     height: 100%;
+    height: 100%;
 }
 
-.red, .blue, .yellow, .orange {
-    -moz-box-sizing:    border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing:        border-box;
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
-.red {
-    width:100%;
-    height:90%;
-    background:#ffffff;
-    overflow: hidden;
-    padding: 1px 2px 6px 2px;
-    border: 2px solid rgb(31, 27, 27);
-    border-radius: 3px;
-    margin-bottom: 2px;
-    box-shadow: 30px 30px 40px rgba(37, 35, 35, 0.1);
-    color: gray;
-    font-size: 12px;
-    font-weight: 600;   
+.card-container {
+  margin: 5px;
+  width: 700px;
+  height: 100px;
+  white-space: normal;
+ 
 }
 
-.blue {
-    height:100px;
-    width: 20%;
-    display: inline;
-    margin: 0 2% 2% 0;  
+.container {
+  margin: 5px;
+  width: 1000px;
+  height: 100%;
+  border-radius: 8px;
+  white-space: nowrap;
+  display: inline-block;
 }
 
-.yellow {
-    height:100px;
-    width: 20%;
-    display: inline;
-    margin: 0 1% 1% 0;
-    text-align: center;
+.item {
+  border: 1px solid #b1aaaa;
+  border-radius: 2px;
+  background-color:#ffffff;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-span{
-    font-weight: 800;
-    color: #666b77;
-    margin-left: 4px;
+/* Inline-block */
+.inline {
+  vertical-align: middle;
+  overflow-y: scroll; 
 }
 
-img {
-    height: auto;
-    margin: -40px 0 -30px 0;
-    
+.inline-item {
+  display: inline-block;
+  vertical-align: middle;
+  height: 96px;
+  margin-right: -4px;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow: auto;
+}
+
+.flex-item {
+  flex: 0 0 auto;
 }
 
 .temp {
@@ -71,22 +81,24 @@ img {
     margin: -5px 0% 0% 0;
 }
 
-.main {
-    margin: 0 1% 1% 0;
-    font-weight: 900;
-    color:#2b304d;
-}
-
 #time {
     font-weight: bold;
 }
 
-#date {
+h2, h1, #site-search, .button {
     font-family: 'Marcellus', serif;
 }
 
-h1, button, input {
-    font-family: 'Marcellus', serif;
+#site-search {
+  margin-bottom: 20px;
 }
 
+.red {
+  margin: 0 5px;
+}
 
+.red, .blue, .yellow, .orange {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+}

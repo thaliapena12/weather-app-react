@@ -16,7 +16,7 @@ const LocationSelector = ({handleSubmit}) => {
                 value={location} 
                 onChange={(e) => setLocation(e.target.value)}>
             </input>
-            <button onClick={() => handleSubmit(location)}>Search</button>
+            <button className="button" onClick={() => handleSubmit(location)}>Search</button>
         </div>
     )
 
